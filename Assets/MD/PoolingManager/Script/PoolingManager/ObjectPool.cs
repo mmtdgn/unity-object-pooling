@@ -34,9 +34,9 @@ namespace MD.ObjectPooling
             {
                 name = "Poolx" + m_Pool.Length.ToString(),
                 transform =
-            {
-                position = Vector3.zero
-            }
+                {
+                    position = Vector3.zero
+                }
             };
 
             m_SubRoots = new GameObject[m_Pool.Length];
@@ -47,10 +47,10 @@ namespace MD.ObjectPooling
                 {
                     name = $"{m_Pool[i].ObjectPrefab.name.ToUpper()}_x{m_Pool[i].PoolSize.ToString()}",
                     transform =
-                {
-                    position =Vector3.zero,
-                    parent = m_PoolRoot.transform
-                }
+                    {
+                        position =Vector3.zero,
+                        parent = m_PoolRoot.transform
+                    }
                 };
                 m_SubRoots[i] = _SubRoot;
             }
